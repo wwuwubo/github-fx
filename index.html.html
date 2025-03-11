@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>呜呜伯的个人主页</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* 动态渐变背景：浅蓝色和橙色 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background: linear-gradient(270deg, #ADD8E6, #FFDAB9);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* 内容容器 */
+    .container {
+      max-width: 800px;
+      width: 90%;
+      padding: 40px;
+      background: transparent;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .container h1 {
+      margin-bottom: 20px;
+      font-size: 2.8em;
+      color: #007BFF;
+      letter-spacing: 1px;
+    }
+    
+    /* 完全透明的表格，优化布局 */
+    .info-table {
+      width: 100%;
+      border-collapse: separate; /* 支持边框间距 */
+      border-spacing: 0 10px;      /* 与行之间产生垂直间距 */
+      margin: 20px 0;
+      background: transparent;
+    }
+    
+    .info-table th, .info-table td {
+      padding: 10px 5px; /* 适当内边距 */
+      text-align: left;
+      font-size: 1.2em;
+      border: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    
+    .info-table th {
+      color: #007BFF;
+      font-weight: 700;
+    }
+    
+    .info-table td {
+      color: #FF6600;
+    }
+    
+    /* 为每一行添加底部分隔线 */
+    .info-table tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    /* 鼠标悬停时增加阴影和背景反馈 */
+    .info-table tr:hover {
+      background: rgba(0, 0, 0, 0.03);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+    
+    /* 去除最后一行的横线 */
+    .info-table tr:last-child {
+      border-bottom: none;
+    }
+    
+    .artistic {
+      font-size: 1.3em;
+      background: linear-gradient(90deg, #FF6600, #007BFF, #FF6600);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease infinite;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+    
+    /* 信息内容 */
+    .info p {
+      margin: 15px 0;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>欢迎来到铺陈的个人主页</h1>
+    <table class="info-table">
+      <tr>
+        <th>ID：</th>
+        <td>铺陈</td>
+      </tr>
+      <tr>
+        <th>出生日期：</th>
+        <td>2005.4</td>
+      </tr>
+      <tr>
+        <th>学历：</th>
+        <td>应急管理大学（筹）</td>
+      </tr>
+      <tr>
+        <th>爱好：</th>
+        <td>摄影、读书、研究PC硬件与软件</td>
+      </tr>
+      <tr>
+        <th>职业技能：</th>
+        <td>网页设计、视频编辑、音频处理、摄影摄像（自有相机）</td>
+      </tr>
+    </table>
+    <div class="info">
+      <p class="artistic">我充满激情与创意，热爱探索科技与艺术的无限可能。让我们无限进步！</p>
+    </div>
+  </div>
+</body>
+</html>
